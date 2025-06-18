@@ -1,6 +1,6 @@
 # 🦴 3D Bone and Medical Imaging Datasets
 
-This repository is a curated collection of publicly available datasets that include **3D bone models** or **3D medical imaging data** (such as CT and MRI scans) from which 3D anatomical models can be extracted. It is designed as a centralized resource for researchers, engineers, and developers working in:
+This repository is a curated collection of publicly available datasets that include **3D bone models** or **3D medical imaging data** (such as CT and MRI scans) from which **3D bone models can be extracted**. It is designed as a centralized resource for researchers, engineers, and developers working in:
 
 - Biomedical engineering  
 - Medical image analysis  
@@ -54,6 +54,9 @@ If you want to suggest a dataset or fix, please:
    - `Add: Femoral CT dataset`
    - `Fix: Broken link in VerSe 2020 dataset`
 3. Download the `submit-dataset.csv` file, fill in the information and attach it to your request.
+   
+> 📌 *Important: The submitted datasets must include **3D bone models** or **3D medical imaging data** (such as CT and MRI scans) from which 3D bone models can be extracted*
+   
 
 ## ⚠️ Disclaimer
 
