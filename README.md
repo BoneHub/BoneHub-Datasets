@@ -26,7 +26,7 @@ If you use this repository in your research, presentations, or software, please 
 author = {S.H. Alavi},
 title = {A Curated Collection of Datasets with 3D Bone Models and Medical Imaging Data},
 year = {2025},
-howpublished = {\url{https://github.com/BDDP-UT/3d-bone-datasets-catalog}},
+howpublished = {\url{https://github.com/OsteoForma/OsteoVault3D}},
 note = {Accessed: [Insert Date]}
 }
 ```
