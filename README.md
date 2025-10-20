@@ -26,7 +26,7 @@ If you use this repository in your research, presentations, or software, please 
 author = {S.H. Alavi},
 title = {A Curated Collection of Datasets with 3D Bone Models and Medical Imaging Data},
 year = {2025},
-howpublished = {\url{https://github.com/OsteoForma/OsteoDatasets}},
+howpublished = {\url{https://github.com/BoneHub/BoneHub-Datasets},
 note = {Accessed: [Insert Date]}
 }
 ```
@@ -49,7 +49,7 @@ We welcome contributions from the community to improve this resource. You can:
 
 If you want to suggest a dataset or fix, please:
 
-1. Open a new [GitHub Issue](https://github.com/BDDP-UT/3d-bone-datasets-catalog/issues)
+1. Open a new [GitHub Issue](https://github.com/BoneHub/BoneHub-Datasets/issues)
 2. Use a **clear and descriptive title**, e.g.,  
    - `Add: Femoral CT dataset`
    - `Fix: Broken link in VerSe 2020 dataset`
@@ -66,13 +66,14 @@ This repository **does not host** any datasets. It only provides links and metad
 
 ## 📬 Contact
 
-Maintained by: **Hamid Alavi**
+Maintained by: **Hamid Alavi**, **Malte Asseln**
 
 Affiliation: Department of Biomechanical Engineering, University of Twente, The Netherlands.
 
 GitHub: [github.com/hmralavi](https://github.com/hmralavi)
 
 Email: [hamid.alavi@utwente.nl](mailto:hamid.alavi@utwente.nl)
+Email: [m.asseln@utwente.nl](mailto:m.asseln@utwente.nl)
 
 ---
 
