@@ -1,4 +1,6 @@
-# 🦴 3D Bone and Medical Imaging Datasets
+# **See the datasets [here](https://github.com/BoneHub/BoneHub-Datasets/blob/main/datasets.md)**
+
+# Welcome to the BoneHub-Datasets
 
 This repository is a curated collection of publicly available datasets that include **3D bone models** or **3D medical imaging data** (such as CT and MRI scans) from which **3D bone models can be extracted**. It is designed as a centralized resource for researchers, engineers, and developers working in:
 
