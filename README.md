@@ -24,7 +24,7 @@ If you use this repository in your research, presentations, or software, please 
 
 - **Cite the GitHub repository**
 ```
-@misc{Alavi2025bone3d,
+@misc{AlaviAsseln2025BoneHubDatasets,
 author = {S.H. Alavi, M. Asseln},
 title = {A Curated Collection of Datasets with 3D Bone Models and Medical Imaging Data},
 year = {2025},
@@ -73,6 +73,7 @@ Maintained by: **Hamid Alavi**, **Malte Asseln**
 Affiliation: Department of Biomechanical Engineering, University of Twente, The Netherlands.
 
 Email: [hamid.alavi@utwente.nl](mailto:hamid.alavi@utwente.nl)
+
 Email: [m.asseln@utwente.nl](mailto:m.asseln@utwente.nl)
 
 ---
