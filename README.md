@@ -26,7 +26,7 @@ If you use this repository in your research, presentations, or software, please 
 ```
 @misc{AlaviAsseln2025BoneHubDatasets,
 author = {S.H. Alavi, M. Asseln},
-title = {A Curated Collection of Datasets with 3D Bone Models and Medical Imaging Data},
+title = {A Curated Collection of Datasets with 3D Bone Shapes and Medical Image Data},
 year = {2025},
 howpublished = {\url{https://github.com/BoneHub/BoneHub-Datasets},
 note = {Accessed: [Insert Date]}
