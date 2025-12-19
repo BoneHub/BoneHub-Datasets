@@ -1,0 +1,461 @@
+name: Suggest a new dataset
+description: Suggest a dataset to be added to the registry
+title: "New Dataset: "
+labels:
+  - new-dataset-suggestion
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for your interest in contributing to this dataset registry! Please fill out this form to suggest a new dataset. We will review your submission.
+        > 📌 *Note: We highly encourage you to fill out all the fields that are relevant to the dataset you are suggesting. If a field does not apply, you can leave it blank.*
+        > 📌 *Note: Use `;` to separate multiple entries within a field where needed.*
+
+  - type: markdown
+    attributes:
+      value: |
+        &nbsp;
+        &nbsp;
+
+# ---- Basic Information ----
+  - type: markdown
+    attributes:
+      value: "# 📋 Basic Information"
+
+  - type: input
+    id: dataset_name
+    attributes:
+      label: Dataset name
+      description: "The name of the dataset."
+      placeholder: "e.g., 'Lung CT Scans Dataset'"
+    validations:
+      required: true
+
+  - type: input
+    id: access_link
+    attributes:
+      label: Access link
+      description: "URL(s) where the dataset can be accessed."
+      placeholder: "https://dataset.com; https://another-link.com"
+    validations:
+      required: true
+
+  - type: input
+    id: related_paper
+    attributes:
+      label: Related Paper
+      description: "Link to the paper(s) describing the dataset, if available."
+      placeholder: "https://doi.org/xxxx"
+    validations:
+      required: false
+    
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      description: "Country or countries that own or host the dataset."
+      placeholder: "e.g., Netherlands; USA"
+    validations:
+      required: false
+  
+  - type: input
+    id: released_date
+    attributes:
+      label: Released Date
+      description: "Date when the dataset was published or made available."
+      placeholder: "e.g., 2025"
+    validations:
+      required: false
+
+  - type: input
+    id: dataset_size
+    attributes:
+      label: Dataset Size
+      description: "Approximate size of the dataset in GB."
+      placeholder: "e.g., 50"
+    validations:
+      required: false
+
+  - type: textarea
+    id: remarks
+    attributes:
+      label: Remarks
+      description: |
+        Any additional remarks that may be relevant to people who want to use the dataset.
+
+        You may also upload screenshots of the dataset to better illustrate its content.
+
+        <details>
+        <summary>💡 Click to see examples of what could be mentioned:</summary>
+
+        - Study population characteristics
+          - Dataset focuses on pediatric patients aged 5–12
+          - Includes subjects before and after total knee/hip replacement surgery
+        - Imaging modality and acquisition details
+          - Multi-center MRI data acquired on scanners from different vendors
+          - Longitudinal imaging with multiple time points per subject
+        - Annotations and ground truth
+          - Includes segmentations reviewed by expert radiologists
+          - Landmarks and anatomical correspondences are included
+        - Previous usage or validation
+          - Used for training AI models such as Model A, Model B, or Model C
+        - Related projects or initiatives
+          - Part of the larger XYZ research project
+          - Associated with an international challenge (e.g., MICCAI challenge)
+        - Data quality and curation notes
+          - Includes scans with common artifacts (motion, noise) to reflect real-world data
+          - Some scans may be incomplete or partially corrupted
+        - Limitations and biases
+          - Limited to European population
+        - Intended use and scope
+          - Suitable for segmentation or registration of specific bones or organs
+
+        </details>
+
+      placeholder: Write your remarks here...
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        &nbsp;
+        &nbsp;
+
+# ---- Medical Image Data ----
+  - type: markdown
+    attributes:
+      value: "# 🩻 Medical Image Data"
+    
+  - type: dropdown
+    id: medical_images_included
+    attributes:
+      label: Medical Images Included
+      description: Does this dataset provides medical images (e.g., CT, MRI)?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: imaging_modality
+    attributes:
+      label: Imaging Modality
+      description: "Select the imaging modalities that the dataset is based on. Choose all that apply."
+      multiple: true
+      options:
+        - CT
+        - CBCT
+        - MRI
+        - X-ray
+        - Ultrasound
+        - PET
+        - SPECT
+        - Other
+    validations:
+      required: false
+    
+  - type: dropdown
+    id: images_source
+    attributes:
+      label: Images Source
+      description: |
+        Select the source of the medical images. Choose all that apply.
+          - Original: images created specifically for this dataset.
+          - Adopted: images sourced from other datasets.
+      multiple: true
+      options:
+        - Original
+        - Adopted
+    validations:
+      required: false
+    
+  - type: input
+    id: images_source_details
+    attributes:
+      label: Images Source Details
+      description: "If adopted images are used, please provide links to the original dataset(s)."
+      placeholder: "https://dataset.com; https://another-link.com"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: imaged_regions
+    attributes:
+      label: Imaged Regions
+      description: "Select the radiological regions covered in the dataset. Choose all that apply. If the dataset does not include medical images, you should skip this field."
+      multiple: true
+      options:
+        - whole Body
+        - Neurocranium
+        - Viscerocranium
+        - Cervical Spine
+        - Thoracic Spine
+        - Lumbar Spine
+        - Thoratic Cage
+        - Abdomen
+        - Pelvis
+        - Shoulder
+        - Upper Arm
+        - Forearm
+        - Wrist
+        - Hand
+        - Hip
+        - Upper Leg
+        - Knee
+        - Lower Leg
+        - Ankle
+        - Foot
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        &nbsp;
+        &nbsp;
+
+# ---- Medical Shapes Data ----
+  - type: markdown
+    attributes:
+      value: |
+        # 🦴 Medical Shapes Data
+        > 📌 *Note: This section focuses on **3D bone shapes** (e.g., segmented bones from CT or MRI scans). If the dataset does not contain 3D bone shapes, you can skip this section.*
+  
+  - type: dropdown
+    id: available_structures
+    attributes:
+      label: Available Structures
+      description: "Select the structures available in the dataset. Choose all that apply."
+      multiple: true
+      options:
+        - Cranial Bones
+        - Facial Bones
+        - Cervical Vertebrae
+        - Thoracic Vertebrae
+        - Lumbar Vertebrae
+        - Sacrum
+        - Coccyx
+        - Ribs
+        - Sternum
+        - Clavicle
+        - Scapula
+        - Humerus
+        - Radius
+        - Ulna
+        - Carpals
+        - Metacarpals
+        - Phalanges (Hand)
+        - Hip Bones
+        - Proximal Femur
+        - Femur
+        - Distal Femur
+        - Patella
+        - Proximal Tibia
+        - Tibia
+        - Distal Tibia
+        - Proximal Fibula
+        - Fibula
+        - Distal Fibula
+        - Tarsals
+        - Metatarsals
+        - Phalanges (Foot)
+    validations:
+      required: false
+
+  - type: input
+    id: additional_structures
+    attributes:
+      label: Additional Structures
+      description: Additional structures (non-bone) available in the dataset that are **related to bones** (e.g., intervertebral discs, muscles, cartilage).
+      placeholder: "e.g., intervertebral discs; muscle tissues"
+    validations:
+      required: false
+
+  - type: input
+    id: landmarks
+    attributes:
+      label: Landmarks
+      description: "List of anatomical landmarks available in the dataset, if any."
+      placeholder: "e.g., Pelvic Landmarks; Spinal Landmarks"
+  
+  - type: markdown
+    attributes:
+      value: |
+        &nbsp;
+        &nbsp;
+        **Specify the 3D representations available in the dataset:**
+
+  - type: dropdown
+    id: voxel_segmentation_masks
+    attributes:
+      label: Voxel Segmentation Mask
+      description: "Indicate if voxel segmentation masks are available in the dataset. Choose all that apply."
+      multiple: true
+      options:
+        - Available
+        - Manual Segmentation
+        - Semi Automatic Segmentation
+        - Automatic Segmentation
+    validations:
+      required: false
+
+  # - type: dropdown
+  #   id: point_cloud
+  #   attributes:
+  #     label: Point Cloud
+  #     description: "Indicate if point cloud data are available in the dataset. Choose all that apply."
+  #     multiple: true
+  #     options:
+  #       - Available
+  #       - PLY
+  #       - TXT
+  #       - CSV
+
+  - type: dropdown
+    id: mesh_model
+    attributes:
+      label: Mesh Model
+      description: "Indicate if mesh models are available in the dataset. Choose all that apply."
+      multiple: true
+      options:
+        - Available
+        - STL
+        - OBJ
+        - PLY
+        - Other
+    validations:
+      required: false
+
+  - type: dropdown
+    id: cad_model
+    attributes:
+      label: CAD Model
+      description: "Indicate if CAD models are available in the dataset. Choose all that apply."
+      multiple: true
+      options:
+        - Available
+        - STEP
+        - IGES
+        - Other
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        &nbsp;
+        &nbsp;
+  
+# ---- Subjects Metadata ----
+  - type: markdown
+    attributes:
+      value: |
+        # 👥 Subjects Metadata
+  
+  - type: input
+    id: number_of_subjects
+    attributes:
+      label: Number of Subjects
+      description: "Total number of subjects in the dataset. Please note that number of subjects may differ from number of images or 3D shapes."
+      placeholder: "e.g., 100"
+    validations:
+      required: false
+
+  - type: input
+    id: available_information_per_subject
+    attributes:
+      label: Available Information per Subject.
+      description: "List the types of information available for each subject. For example, subject information offered in DICOM tags or in a separate CSV/Excel file."
+      placeholder: "e.g., age; gender; height; weight; ethnicity; medical history"
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: subjects_vital_status
+    attributes:
+      label: Subjects Vital Status
+      description: "Indicate the vital status of the subjects in the dataset. Choose all that apply."
+      multiple: true
+      options:
+        - Alive
+        - Postmortem
+    validations:
+      required: false
+    
+  - type: input
+    id: subjects_clinical_condition
+    attributes:
+      label: Subjects Clinical Condition
+      description: "Indicate the clinical condition of the subjects in the dataset."
+      placeholder: "e.g., healthy; osteoarthritis; fracture; implant; post-operative; ligament tear"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        &nbsp;
+        &nbsp;
+  
+  # ---- Data Usage Policy ----
+  - type: markdown
+    attributes:
+      value: |
+        # 📜 Data Usage Policy
+  
+  - type: dropdown
+    id: access_policy
+    attributes:
+      label: Access Policy
+      description: |
+        Please select the access type for this dataset. Choose all that apply.
+
+        <details>
+        <summary>💡 Click to see explanations of each access type:</summary>
+
+        - **Open Access**: Free to access without any restrictions.
+        - **Simple Registration**: Requires simple account creation without any further requirements.
+        - **Authorization Required**: Requires approval from dataset owner, often requiring a research proposal.
+        - **Payment Required**: Requires payment or subscription to access the dataset.
+
+        </details>
+
+      multiple: true
+      options:
+        - Open Access
+        - Simple Registration
+        - Authorization Required
+        - Payment Required
+    validations:
+      required: false
+
+  - type: dropdown
+    id: data_redistribution_policy
+    attributes:
+      label: Data Redistribution Policy
+      description: "Please select the data redistribution policy (i.e., how the data or derivatives can be redistributed) for this dataset. Choose all that apply."
+      multiple: true
+      options:
+        - Research and Commercial Redistribution Allowed
+        - Only Research Redistribution Allowed
+        - No Redistribution Allowed
+    validations:
+      required: false
+  
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: "Specify the license under which the dataset is released. Choose all that apply."
+      placeholder: "e.g., CC BY 4.0; CC BY-NC-ND 4.0; MIT; Custom License"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        &nbsp;
+        &nbsp;

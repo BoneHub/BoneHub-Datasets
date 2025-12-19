@@ -1,0 +1,35 @@
+name: Add dataset to CSV
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  contents: write  # needed to push changes
+
+jobs:
+  add-dataset:
+    if: contains(github.event.issue.labels.*.name, 'dataset-suggestion-approved')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Parse issue and append to CSV
+        run: |
+          pip install pyyaml
+          python scripts/add_dataset.py "${{ github.event.issue.body }}" "${{ github.event.issue.title }}"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/datasets.csv
+          git commit -m "Add dataset from issue #${{ github.event.issue.number }}"
+          git push

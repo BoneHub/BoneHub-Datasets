@@ -1,4 +1,6 @@
-# **See the datasets [here](https://github.com/BoneHub/BoneHub-Datasets/blob/main/datasets.md)**
+<!-- # **See the datasets [here](https://github.com/BoneHub/BoneHub-Datasets/blob/main/data/datasets.md)** -->
+
+> ℹ️ List of datasets will be published upon our paper acceptance
 
 # Welcome to the BoneHub-Datasets
 
@@ -12,15 +14,15 @@ This repository is a curated collection of publicly available datasets that incl
 
 We provide structured metadata, links, and usage details for each dataset in both human-readable and machine-readable formats. The aim is to simplify dataset discovery and comparison across anatomical regions and imaging modalities.
 
-> 📌 *Note: This repository does not host any original dataset files — only metadata and links are provided.*
+> 📌 *Note: This repository does not host any original dataset files — only information and links are provided.*
 
 ## 🧾 Citation
 
-If you use this repository in your research, presentations, or software, please cite both our paper and our repository.
+If you use this resource in your research, presentations, or software, please cite both our paper and our repository.
 
 - **Cite our paper**
   
-  [insert paper title here](https://doi)
+  [paper will be added here]()
 
 - **Cite the GitHub repository**
 ```
@@ -43,28 +45,17 @@ All dataset summaries, tables, and documentation in this repository are licensed
 
 We welcome contributions from the community to improve this resource. You can:
 
-- Suggest a new dataset
-- Add missing metadata to existing datasets
-- Report errors or broken links
+- Suggest a new dataset by submitting this [issue template](https://github.com/BoneHub/BoneHub-Datasets/issues/new?template=new-dataset-suggestion.yml)
 
-### How to Contribute
+- Report incorrect information by submitting an [issue](https://github.com/BoneHub/BoneHub-Datasets/issues/new)
 
-If you want to suggest a dataset or fix, please:
-
-1. Open a new [GitHub Issue](https://github.com/BoneHub/BoneHub-Datasets/issues)
-2. Use a **clear and descriptive title**, e.g.,  
-   - `Add: Femoral CT dataset`
-   - `Fix: Broken link in VerSe 2020 dataset`
-3. Download the `submit-dataset.csv` file, fill in the information and attach it to your request.
+- You can also make direct changes to `data/datasets.csv` by a pull request!
    
-> 📌 *Important: The submitted datasets must include **3D bone models** or **3D medical imaging data** (such as CT and MRI scans) from which 3D bone models can be extracted*
+> 📌 *Important: Datasets suggestions must include **3D bone models** or **3D medical imaging data** (such as CT and MRI scans) from which 3D bone models can be extracted*
    
-
 ## ⚠️ Disclaimer
 
 This repository **does not host** any datasets. It only provides links and metadata to publicly available datasets. Users are responsible for reviewing and complying with each dataset's licensing terms, restrictions, and usage agreements as provided by the original source.
-
----
 
 ## 📬 Contact
 
@@ -75,8 +66,4 @@ Affiliation: Department of Biomechanical Engineering, University of Twente, The 
 Email: [hamid.alavi@utwente.nl](mailto:hamid.alavi@utwente.nl)
 
 Email: [m.asseln@utwente.nl](mailto:m.asseln@utwente.nl)
-
----
-
-Thank you for supporting open science and sharing knowledge!
 
