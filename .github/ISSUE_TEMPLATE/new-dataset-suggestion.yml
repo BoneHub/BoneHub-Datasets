@@ -164,8 +164,15 @@ body:
       label: Images Source
       description: |
         Select the source of the medical images. Choose all that apply.
-          - Original: images created specifically for this dataset.
-          - Adopted: images sourced from other datasets.
+
+        <details>
+        <summary>💡 Click to see explanations of each option:</summary>
+
+        - Original: images created specifically for this dataset.
+        - Adopted: images sourced from other datasets.
+
+        </details>
+        
       multiple: true
       options:
         - Original
@@ -293,12 +300,22 @@ body:
     id: voxel_segmentation_masks
     attributes:
       label: Voxel Segmentation Mask
-      description: "Indicate if voxel segmentation masks are available in the dataset. Choose all that apply."
+      description: |
+        Indicate if voxel segmentation masks are available in the dataset. Choose all that apply.
+
+        <details>
+        <summary>💡 Click to see explanations of each option:</summary>
+        
+        - **Available**: Voxel segmentation masks are included in the dataset.
+        - **Supervised Segmentation**: Segmentation masks created or verified by human experts.
+        - **Automatic Segmentation**: Segmentation masks generated using automated algorithms without human review.
+        
+        </details>
+
       multiple: true
       options:
         - Available
-        - Manual Segmentation
-        - Semi Automatic Segmentation
+        - Supervised Segmentation
         - Automatic Segmentation
     validations:
       required: false
@@ -319,14 +336,23 @@ body:
     id: mesh_model
     attributes:
       label: Mesh Model
-      description: "Indicate if mesh models are available in the dataset. Choose all that apply."
+      description: |
+        Indicate if mesh models (e.g., STL, OBJ, PLY) are available in the dataset. Choose all that apply.
+          
+        <details>
+        <summary>💡 Click to see explanations of each option:</summary>
+        
+        - **Available**: Mesh models are included in the dataset.
+        - **Supervised 3D Reconstruction**: Meshes created or verified by human experts.
+        - **Automatic 3D Reconstruction**: Meshes generated using automated algorithms without human review.
+        
+        </details>
+
       multiple: true
       options:
         - Available
-        - STL
-        - OBJ
-        - PLY
-        - Other
+        - Supervised 3D Reconstruction
+        - Automatic 3D Reconstruction
     validations:
       required: false
 
@@ -334,13 +360,23 @@ body:
     id: cad_model
     attributes:
       label: CAD Model
-      description: "Indicate if CAD models are available in the dataset. Choose all that apply."
+      description: |
+        Indicate if CAD models (e.g., STEP, IGES) are available in the dataset. Choose all that apply.
+        
+        <details>
+        <summary>💡 Click to see explanations of each option:</summary
+        
+        - **Available**: CAD models are included in the dataset.
+        - **Supervised CAD Modeling**: CAD models created or verified by human experts.
+        - **Automatic CAD Modeling**: CAD models generated using automated algorithms without human review.
+        
+        </details>
+
       multiple: true
       options:
         - Available
-        - STEP
-        - IGES
-        - Other
+        - Supervised CAD Modeling
+        - Automatic CAD Modeling
     validations:
       required: false
 
