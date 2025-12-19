@@ -168,8 +168,8 @@ body:
         <details>
         <summary>💡 Click to see explanations of each option:</summary>
 
-        - Original: images created specifically for this dataset.
-        - Adopted: images sourced from other datasets.
+        - **Original**: images created specifically for this dataset.
+        - **Adopted**: images sourced from other datasets.
 
         </details>
         
@@ -255,7 +255,7 @@ body:
         - Ulna
         - Carpals
         - Metacarpals
-        - Phalanges (Hand)
+        - Phalanges Hand
         - Hip Bones
         - Proximal Femur
         - Femur
@@ -269,7 +269,7 @@ body:
         - Distal Fibula
         - Tarsals
         - Metatarsals
-        - Phalanges (Foot)
+        - Phalanges Foot
     validations:
       required: false
 
@@ -277,8 +277,8 @@ body:
     id: additional_structures
     attributes:
       label: Additional Structures
-      description: Additional structures (non-bone) available in the dataset that are **related to bones** (e.g., intervertebral discs, muscles, cartilage).
-      placeholder: "e.g., intervertebral discs; muscle tissues"
+      description: Additional structures (non-bone) available in the dataset that are **related to bones** (e.g., intervertebral discs, cartilage, muscles).
+      placeholder: "e.g., intervertebral discs; knee cartilage; gluteal muscles"
     validations:
       required: false
 

@@ -46,6 +46,7 @@ def normalize_values(row, template_path) -> str:
         parts = [v.strip() for v in value.split(",") if v.strip()]
         return ";".join(parts)
 
+    # Identify dropdown fields from the template
     dropdown_fields = set()
 
     if template_path.exists():
@@ -59,12 +60,13 @@ def normalize_values(row, template_path) -> str:
                     dropdown_fields.add(field_label)
 
     for key in row.keys():
+        # For dropdown fields, convert commas to semicolons
         if key in dropdown_fields:
             row[key] = comma2semicolon(row[key])
         # For all fields, remove white space around semicolon-separated values
         if ";" in row[key]:
             parts = [v.strip() for v in row[key].split(";") if v.strip()]
-            row[key] = ";".join(parts)
+            row[key] = "; ".join(parts)
     return row
 
 
