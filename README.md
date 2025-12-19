@@ -45,13 +45,11 @@ All dataset summaries, tables, and documentation in this repository are licensed
 
 We welcome contributions from the community to improve this resource. You can:
 
-- Suggest a new dataset by submitting this [issue template](https://github.com/BoneHub/BoneHub-Datasets/issues/new?template=new-dataset-suggestion.yml)
+- Suggest a new dataset by submitting this [dataset suggestion form](https://github.com/BoneHub/BoneHub-Datasets/issues/new?template=new-dataset-suggestion.yml)
 
 - Report incorrect information by submitting an [issue](https://github.com/BoneHub/BoneHub-Datasets/issues/new)
 
 - You can also make direct changes to `data/datasets.csv` by a pull request!
-   
-> 📌 *Important: Datasets suggestions must include **3D bone models** or **3D medical imaging data** (such as CT and MRI scans) from which 3D bone models can be extracted*
    
 ## ⚠️ Disclaimer
 

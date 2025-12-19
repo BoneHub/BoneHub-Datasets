@@ -8,9 +8,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### Thank you for your interest in contributing to this dataset registry! Please fill out this form to suggest a new dataset. We will review your submission.
-        > 📌 *Note: We highly encourage you to fill out all the fields that are relevant to the dataset you are suggesting. If a field does not apply, you can leave it blank.*
-        > 📌 *Note: Use `;` to separate multiple entries within a field where needed.*
+        ### Thank you for your interest in contributing to this dataset registry! Please fill out this form to suggest a new dataset. We will gladly review your submission.
+        > 📌 *The suggested dataset must include **3D models** (e.g. STL meshes) AND/OR **3D images** (e.g. CT, MRI) of bones.*
+        > 📌 *We highly encourage you to fill out all the fields that are relevant to the dataset you are suggesting. If a field does not apply, you can leave it blank.*
+        > 📌 *Use `;` to separate multiple entries within a field where needed.*
 
   - type: markdown
     attributes:
